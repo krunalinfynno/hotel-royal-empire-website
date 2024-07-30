@@ -35,11 +35,12 @@ document.addEventListener('DOMContentLoaded', function () {
         const cancelButton = document.getElementById('cancel-button');
         menu.classList.toggle('translate-x-full');
         cancelButton.classList.toggle('hidden');
+        document.body.classList.toggle('no-scroll'); // Toggle no-scroll class on body
     }
-
+    
     document.getElementById('menu-toggle').addEventListener('click', toggleMenu);
     document.getElementById('cancel-button').addEventListener('click', toggleMenu);
-
+    
     const navLinks = document.querySelectorAll('.nav-link');
     navLinks.forEach(link => {
         link.addEventListener('click', () => {
@@ -47,8 +48,10 @@ document.addEventListener('DOMContentLoaded', function () {
             const cancelButton = document.getElementById('cancel-button');
             menu.classList.add('translate-x-full');
             cancelButton.classList.add('hidden');
+            document.body.classList.remove('no-scroll'); // Remove no-scroll class when link is clicked
         });
     });
+    
 
     const roomData = {
         deluxe: {

@@ -481,13 +481,13 @@ video {
   color: #FFFFFF;
 }
 
+#room-price {
+  display: inline-block;
+}
+
 #modalImage {
   opacity: 1;
   transition: opacity 0.5s ease-in-out;
-}
-
-#modalImage.fade-out {
-  opacity: 0;
 }
 
 .title-design {
@@ -679,10 +679,6 @@ video {
   top: 1rem;
 }
 
-.top-\[-22px\] {
-  top: -22px;
-}
-
 .top-\[-25px\] {
   top: -25px;
 }
@@ -717,6 +713,11 @@ video {
 .mx-auto {
   margin-left: auto;
   margin-right: auto;
+}
+
+.my-4 {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
 }
 
 .mb-10 {
@@ -841,6 +842,14 @@ video {
 
 .h-full {
   height: 100%;
+}
+
+.h-12 {
+  height: 3rem;
+}
+
+.h-14 {
+  height: 3.5rem;
 }
 
 .min-h-screen {
@@ -1544,6 +1553,11 @@ video {
     margin-right: 2rem;
   }
 
+  .md\:my-0 {
+    margin-top: 0px;
+    margin-bottom: 0px;
+  }
+
   .md\:my-6 {
     margin-top: 1.5rem;
     margin-bottom: 1.5rem;
@@ -1696,6 +1710,11 @@ video {
 
   .md\:text-lg {
     font-size: 1.125rem;
+    line-height: 1.75rem;
+  }
+
+  .md\:text-xl {
+    font-size: 1.25rem;
     line-height: 1.75rem;
   }
 

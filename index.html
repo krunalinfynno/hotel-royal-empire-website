@@ -5,10 +5,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="./src/output.css" rel="stylesheet">
+  <link rel="shortcut icon" href="./Hotel Icon and Image/Icon/Favicon icon.svg" type="image/x-icon">
   <link href="./src/input.css" rel="stylesheet">
   <title>Hotel Royal Empire</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
-
 
 </head>
 
@@ -18,7 +18,7 @@
   linear-gradient(270deg, rgba(30, 30, 30, 0) 13.98%, rgba(30, 30, 30, 0.8) 77.24%), url('./Hotel Icon and Image/Hero Section.png');">
 
     <nav class="w-full flex justify-between items-center">
-      <img src="./Hotel Icon and Image/Icon/Logo.svg" class="h-15 md:h-24 w-auto">
+      <img src="./Hotel Icon and Image/Icon/Logo.svg" class="h-14 md:h-24 w-auto">
       <ul id="nav-menu"
         class="fixed text-center top-0 right-0 h-full w-full bg-white transform translate-x-full transition-transform duration-300 md:static md:translate-x-0 md:flex md:flex-row md:bg-transparent md:inset-auto md:w-auto md:gap-8">
         <li class="mt-10 md:mt-0"><a href="#home"
@@ -31,9 +31,9 @@
         <li><a href="#hotel"
             class="nav-link block p-4 text-lg font-medium text-primary_1 md:text-primary hover:underline">Gallery</a>
         </li>
-        <li><a href="#"
+        <!-- <li><a href="#"
             class="nav-link block p-4 text-lg font-medium text-primary_1 md:text-primary hover:underline">Hotels</a>
-        </li>
+        </li> -->
         <li><a href="#contact"
             class="nav-link block p-4 text-lg font-medium text-primary_1 md:text-primary hover:underline">Contact Us</a>
         </li>
@@ -92,9 +92,9 @@
       <div class="mt-8 flex flex-col md:flex-row gap-8">
         <div class="md:w-1/2">
           <h3 id="room-title" class="text-xl sm:text-2xl lg:text-3xl text-primary_1 font-semibold">Deluxe Room</h3>
-          <p id="room-price" class="text-lg sm:text-xl lg:text-2xl font-bold mt-4 text-primary_1">
-            ₹7500 <span class="font-normal text-primary_1 text-base lg:text-lg">/per night</span>
-          </p>
+          <p id="room-price" class="text-lg  sm:text-xl lg:text-2xl font-bold mt-4 text-primary_1 ">
+            ₹7500 
+          </p><span class="font-normal text-primary_1 text-base lg:text-lg"> (+ 12% GST)</span>
           <p id="room-description" class="font-normal text-base sm:text-lg lg:text-xl text-primary_2 max-w-xl mt-4">
             The way we travel and move has changed in the last few years. We no longer want the typical photo that all
             our contacts post on Instagram. We no longer want to elbow our way through crowded museums. We no longer
@@ -239,7 +239,7 @@
             Empire.
           </p>
         </div>
-        <div class="mt-10">
+        <!-- <div class="mt-10">
           <h3 class="text-xl sm:text-2xl md:text-[28px] font-bold text-left">Signature Dishes:</h3>
           <p class="font-bold text-lg sm:text-xl md:text-[22px] leading-8 text-white mt-3 max-w-2xl">
             Royal Butter Chicken <span class="font-normal text-white">A rich and creamy dish cooked with tender chicken
@@ -253,7 +253,7 @@
             Chocolate Lava Cake <span class="font-normal text-white">A decadent dessert with a gooey chocolate
               center.</span>
           </p>
-        </div>
+        </div> -->
       </div>
     </div>
   </section>
@@ -307,7 +307,7 @@
           class="bg-gray-900 text-white rounded-lg overflow-hidden shadow-2xl transform transition-all max-w-4xl w-full mx-4 sm:mx-8">
           <div class="relative md:p-2">
             <button
-              class="absolute md:top-1 md:right-2 top-[-22px] right-[3px] text-xl  md:p-1 rounded-full shadow-md focus:outline-none transition transform hover:scale-110 close-modal">
+              class="absolute md:top-1 md:right-2 top-0 right-[3px] text-lg md:text-xl  md:p-1 rounded-full shadow-md focus:outline-none transition transform hover:scale-110 close-modal">
               &#10006;
             </button>
             <div class="flex items-center justify-between md:my-6 md:mx-0 sm:mx-2">
@@ -315,7 +315,7 @@
                 class=" md:text-4xl text-xl rounded-full shadow-md  focus:outline-none   transition transform hover:scale-110 ">
                 &laquo;
               </button>
-              <div class="flex-1 flex justify-center mx-2">
+              <div class="flex-1 flex justify-center my-4 md:my-0 mx-2">
                 <img id="modalImage" src="" alt="Image" class="w-full  h-auto mx-auto rounded-lg shadow-lg">
               </div>
               <button id="nextImage"
