@@ -9,7 +9,12 @@
   <link href="./src/input.css" rel="stylesheet">
   <title>Hotel Royal Empire</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
-
+  <style>
+    .active {
+      background-color: rgba(0, 0, 0, 0.8);
+      color: #FFFFFF;
+    }
+  </style>
 </head>
 
 <body class="m-0 p-0 box-border font-Inter ">
@@ -145,66 +150,6 @@
     </div>
   </section>
 
-  <!-- Gallery section start here  -->
-
-  <!-- <section id="gallery" class="mt-[100px] mx-[50px]">
-    <div class="">
-      <div class="relative-container mt-10">
-        <h2 class="text-5xl font-semibold  text-center  text-primary_1">Photo Gallery</h2>
-        <img class="title-design " src="./Hotel Icon and Image/Icon/Title Design.svg" alt="" srcset="">
-      </div>
-      <div class="grid grid-cols-4  gap-6 mt-10">
-      
-       <div class="overflow-hidden rounded-lg shadow-lg">
-          <img src="./Hotel Icon and Image/Image/Rectangle 11.png" alt="Gallery Image 1"
-            class="w-full h-48 object-cover">
-        </div>
-        <div class="overflow-hidden rounded-lg shadow-lg">
-          <img src="./Hotel Icon and Image/Image/Rectangle 12.png" alt="Gallery Image 2"
-            class="w-full h-48 object-cover">
-        </div>
-        <div class="overflow-hidden rounded-lg shadow-lg">
-          <img src="./Hotel Icon and Image/Image/Rectangle 13.png" alt="Gallery Image 3"
-            class="w-full h-48 object-cover">
-        </div>
-        <div class="overflow-hidden rounded-lg shadow-lg">
-          <img src="./Hotel Icon and Image/Image/Rectangle 17.png" alt="Gallery Image 4"
-            class="w-full h-48 object-cover">
-        </div>
-        <div class="overflow-hidden rounded-lg shadow-lg">
-          <img src="./Hotel Icon and Image/Image/Rectangle 18.png" alt="Gallery Image 1"
-            class="w-full h-48 object-cover">
-        </div>
-        <div class="overflow-hidden rounded-lg shadow-lg">
-          <img src="./Hotel Icon and Image/Image/Rectangle 19.png" alt="Gallery Image 2"
-            class="w-full h-48 object-cover">
-        </div>
-        <div class="overflow-hidden rounded-lg shadow-lg">
-          <img src="./Hotel Icon and Image/Image/Rectangle 21.png" alt="Gallery Image 3"
-            class="w-full h-48 object-cover">
-        </div>
-        <div class="overflow-hidden rounded-lg shadow-lg">
-          <img src="./Hotel Icon and Image/Image/Swimming pool.png" alt="Gallery Image 4"
-            class="w-full h-48 object-cover">
-        </div>
-        <div class="overflow-hidden rounded-lg shadow-lg">
-          <img src="./Hotel Icon and Image/Image/Wedding hall.png" alt="Gallery Image 1"
-            class="w-full h-48 object-cover">
-        </div>
-        <div class="overflow-hidden rounded-lg shadow-lg">
-          <img src="./Hotel Icon and Image/Image/Entrance.png" alt="Gallery Image 2" class="w-full h-48 object-cover">
-        </div>
-        <div class="overflow-hidden rounded-lg shadow-lg">
-          <img src="./Hotel Icon and Image/Image/Rooms.png" alt="Gallery Image 3" class="w-full h-48 object-cover">
-        </div>
-        <div class="overflow-hidden rounded-lg shadow-lg">
-          <img src="./Hotel Icon and Image/Image/Deluxe Room_1-1.png" alt="Gallery Image 4"
-            class="w-full h-48 object-cover">
-        </div>
-
-      </div>
-    </div>
-  </section> -->
 
 
   <!-- Restaurant menu section start here -->
@@ -338,64 +283,942 @@
 
   <!-- Royal Group of hotel section start here  -->
 
-  <!-- <section class="mt-[100px] mx-[50px]">
-  <div class="flex justify-between">
-    <div class="relative">
-      <img class="absolute top-[-25px] left-0 -rotate-90" src="./Hotel Icon and Image/Icon/Title Design.svg" alt=""
-        srcset="">
-      <h2 class="text-5xl font-semibold text-left ml-6  text-primary_1">Royal Group of Hotels</h2>
+  <section class="mt-[100px] mx-4 md:mx-[50px]">
+    <div class="flex flex-col md:flex-row justify-between items-center">
+      <div class="relative mb-8 md:mb-0 md:w-1/2">
+        <img class="absolute top-[-25px] left-0 -rotate-90" src="./Hotel Icon and Image/Icon/Title Design.svg" alt="" />
+        <h2 class="text-3xl md:text-5xl font-semibold text-left ml-6 text-primary_1">Royal Group of Hotels</h2>
+      </div>
+      <div class="">
+        <p class="font-normal text-lg md:text-[24px] max-w-xl">Discover the excellence and charm of our other locations
+          within the Royal Group of Hotels.</p>
+        <div class="relative">
+          <button>
+            <img src="./Hotel Icon and Image/Icon/Search.svg" alt="search" class="absolute top-[55%] left-[58%]">
+          </button>
+          <input type="text" id="searchInput" placeholder="Find Hotel or City Name" onkeyup="filterHotels()"
+            class="pl-4 pr-14 py-3 text-xl font-normal  text-left mt-10 w-[385px] h-[58px]  border border-border_color_2 rounded-[19px] focus:outline-none focus:ring-2 focus:ring-gray-400">
+        </div>
+      </div>
     </div>
-    <div class="">
-      <p class="font-normal  text-[24px]  max-w-xl">Discover the excellence and charm of our other
-        locations within the Royal Group of Hotels.</p>
-      <div class="relative">
-        <button>
-          <img src="./Hotel Icon and Image/Icon/Search.svg" alt="search" class="absolute top-[55%] left-[58%]">
-        </button>
-        <input type="text" placeholder="Find Hotel"
-          class="pl-4 pr-14 py-3 text-xl font-normal  text-left mt-10 w-[385px] h-[58px]  border border-border_color_2 rounded-[19px] focus:outline-none focus:ring-2 focus:ring-gray-400">
+    <div id="hotelList" class="search-hotel mt-10 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+      <div class="hotel-item">
+        <img src="./Hotel Icon and Image/Royal Group Hotels/Hotel Royal Palace/IMG-20240730-WA0055.jpg"
+          alt="Hotel Image" class="w-full object-cover h-[200px] md:h-[300px] rounded-[20px]" />
+        <div class="flex justify-between text-center items-center mt-2">
+          <div>
+            <a href="hotelroyalonline.com">
+              <h2 class="text-center">Hotel Royal Palace</h2>
+            </a>
+            <p>Vadodara, Gujarat</p>
+            <a href="tel:9662448899" class="font-normal text-sm md:text-lg">
+              <p>+91 96624 48899</p>
+            </a>
+            <a href="mailto:Hotelroyal8899@gmail.com">
+              <p>Hotelroyal8899@gmail.com</p>
+            </a>
+          </div>
+          <div class="w-16 h-16 md:w-20 md:h-20 border border-black rounded-full mr-2 md:mr-4 bg-primary_1">
+            <a href="https://maps.app.goo.gl/47pcNttQMwfF9aEh9" target="_blank">
+              <img src="./Hotel Icon and Image/Icon/arrow.svg" alt="top-right"
+                class="p-4 filter invert brightness-0 w-full h-full" />
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="hotel-item">
+        <img
+          src="./Hotel Icon and Image/Royal Group Hotels/HOTEL ROYAL RESIDENCY/WhatsApp Image 2024-07-30 at 13.02.25_947ccf63.jpg"
+          alt="Hotel Image" class="w-full h-[200px] md:h-[300px] rounded-[20px]" />
+        <div class="flex justify-between text-center items-center mt-2">
+          <div>
+            <a href="https://www.hotelroyalresidency.info" target="_blank">
+              <h2 class="text-center">Hotel Royal Residency</h2>
+            </a>
+            <p>Vadodara, Gujarat</p>
+            <a href="tel:8758708586" class="font-normal text-sm md:text-lg">
+              <p>+91 87587 08586</p>
+            </a>
+            <a href="mailto:hotelroyal8586@gmail.com">
+              <p>hotelroyal8586@gmail.com</p>
+            </a>
+          </div>
+          <div class="w-16 h-16 md:w-20 md:h-20 border border-black rounded-full mr-2 md:mr-4 bg-primary_1">
+            <a href="https://maps.app.goo.gl/6cfURzZUAoFp8N17A" target="_blank">
+              <img src="./Hotel Icon and Image/Icon/arrow.svg" alt="top-right"
+                class="p-4 filter invert brightness-0 w-full h-full" />
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="hotel-item">
+        <img
+          src="./Hotel Icon and Image/Royal Group Hotels/hotel royal plaza/WhatsApp Image 2024-07-30 at 13.03.37_0ed7e942.jpg"
+          alt="Hotel Image" class="w-full object-cover h-[200px] md:h-[300px] rounded-[20px]" />
+        <div class="flex justify-between text-center items-center mt-2">
+          <div>
+            <a href="#">
+              <h2 class="text-center">Hotel Royal Plaza</h2>
+            </a>
+            <p>Surat, Gujarat</p>
+            <a href="tel:9574475656" class="font-normal text-sm md:text-lg">
+              <p>+91 95744 75656</p>
+            </a>
+            <a href="mailto:hotelroyalplaza5656@gmail.com">
+              <p>hotelroyalplaza5656@gmail.com</p>
+            </a>
+          </div>
+          <div class="w-16 h-16 md:w-20 md:h-20 border border-black rounded-full mr-2 md:mr-4 bg-primary_1">
+            <a href="https://maps.app.goo.gl/vb6zTrsk1nfFMHiL8" target="_blank">
+              <img src="./Hotel Icon and Image/Icon/arrow.svg" alt="top-right"
+                class="p-4 filter invert brightness-0 w-full h-full" />
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="hotel-item">
+        <img
+          src="./Hotel Icon and Image/Royal Group Hotels/Hotel krishna palace/WhatsApp Image 2024-07-30 at 13.04.13_4c4e0931.jpg"
+          alt="Hotel Image" class="w-full h-[200px] md:h-[300px] rounded-[20px]" />
+        <div class="flex justify-between text-center items-center mt-2">
+          <div>
+            <a href="#">
+              <h2 class="text-center">Hotel Krishna Palace</h2>
+            </a>
+            <p>Anand, Gujarat</p>
+            <a href="tel:7043886886" class="font-normal text-sm md:text-lg">
+              <p>+91 70438 86886</p>
+            </a>
+            <a href="mailto:hotelkrishna886@gmail.com">
+              <p>hotelkrishna886@gmail.com</p>
+            </a>
+          </div>
+          <div class="w-16 h-16 md:w-20 md:h-20 border border-black rounded-full mr-2 md:mr-4 bg-primary_1">
+            <a href="https://maps.app.goo.gl/c6snoQ95tfa37awy9" target="_blank">
+              <img src="./Hotel Icon and Image/Icon/arrow.svg" alt="top-right"
+                class="p-4 filter invert brightness-0 w-full h-full" />
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="hotel-item">
+        <img src="./Hotel Icon and Image/Image/Rectangle 18.png" alt="Hotel Image"
+          class="w-full h-[200px] md:h-[300px] rounded-[20px]" />
+        <div class="flex justify-between text-center items-center mt-2">
+          <div>
+            <a href="#">
+              <h2 class="text-center">Hotel Royal Relax</h2>
+            </a>
+            <p>Gandhinagar, Gujarat</p>
+            <a href="tel:9725543597" class="font-normal text-sm md:text-lg">
+              <p>+91 97255 43597</p>
+            </a>
+            <a href="mailto:hotelroyalrelax81@gmail.com">
+              <p>hotelroyalrelax81@gmail.com</p>
+            </a>
+          </div>
+          <div class="w-16 h-16 md:w-20 md:h-20 border border-black rounded-full mr-2 md:mr-4 bg-primary_1">
+            <a href="https://maps.app.goo.gl/B44EvuVUcZSKYQak7" target="_blank">
+              <img src="./Hotel Icon and Image/Icon/arrow.svg" alt="top-right"
+                class="p-4 filter invert brightness-0 w-full h-full" />
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="hotel-item">
+        <img src="./Hotel Icon and Image/Image/Rectangle 18.png" alt="Hotel Image"
+          class="w-full h-[200px] md:h-[300px] rounded-[20px]" />
+        <div class="flex justify-between text-center items-center mt-2">
+          <div>
+            <a href="hotelroyalinnanand.in">
+              <h2 class="text-center">Hotel Royal Inn.</h2>
+            </a>
+            <p>Anand, Gujarat</p>
+            <a href="tel:8511803435" class="font-normal text-sm md:text-lg">
+              <p>+91 85118 03435</p>
+            </a>
+            <a href="mailto:royalinnanand@gmail.com">
+              <p>royalinnanand@gmail.com</p>
+            </a>
+          </div>
+          <div class="w-16 h-16 md:w-20 md:h-20 border border-black rounded-full mr-2 md:mr-4 bg-primary_1">
+            <a href="https://maps.app.goo.gl/k4fdYKVZpAuuiEyw5" target="_blank">
+              <img src="./Hotel Icon and Image/Icon/arrow.svg" alt="top-right"
+                class="p-4 filter invert brightness-0 w-full h-full" />
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="hotel-item">
+        <img src="./Hotel Icon and Image/Royal Group Hotels/HOTEL RADHA KRISHNA/IMG-20240730-WA0080.jpg" alt="Hotel Image"
+          class="w-full h-[200px] md:h-[300px] rounded-[20px]" />
+        <div class="flex justify-between text-center items-center mt-2">
+          <div>
+            <a href="#">
+              <h2 class="text-center">Hotel Radha Krishna</h2>
+            </a>
+            <p>Anand, Gujarat</p>
+            <a href="tel:8155826111" class="font-normal text-sm md:text-lg">
+              <p>+91 81558 26111</p>
+            </a>
+            <a href="mailto:hotelradhakrishna111@gmail.com">
+              <p>hotelradhakrishna111@gmail.com</p>
+            </a>
+          </div>
+          <div class="w-16 h-16 md:w-20 md:h-20 border border-black rounded-full mr-2 md:mr-4 bg-primary_1">
+            <a href="https://maps.app.goo.gl/pnJdoPBCdz6QPZQd8" target="_blank">
+              <img src="./Hotel Icon and Image/Icon/arrow.svg" alt="top-right"
+                class="p-4 filter invert brightness-0 w-full h-full" />
+            </a>
+          </div>
+        </div>
       </div>
 
+      <div class="hotel-item">
+        <img src="./Hotel Icon and Image/Royal Group Hotels/Hotel Royal Silver/WhatsApp Image 2024-07-30 at 13.07.07_e2d582c3.jpg" alt="Hotel Image"
+          class="w-full h-[200px] md:h-[300px] rounded-[20px]" />
+        <div class="flex justify-between text-center items-center mt-2">
+          <div>
+            <a href="www.hotelroyalsilver.com">
+              <h2 class="text-center">Hotel Royal Silver</h2>
+            </a>
+            <p>Rajkot, Gujarat</p>
+            <a href="tel:9723606162" class="font-normal text-sm md:text-lg">
+              <p>+91 97236 06162 </p>
+            </a>
+            <a href="mailto:Hotelroyalsilver123@gmail.com">
+              <p>Hotelroyalsilver123@Gmail.com</p>
+            </a>
+          </div>
+          <div class="w-16 h-16 md:w-20 md:h-20 border border-black rounded-full mr-2 md:mr-4 bg-primary_1">
+            <a href="https://maps.app.goo.gl/3c3L5JvuhzPBGq4D9" target="_blank">
+              <img src="./Hotel Icon and Image/Icon/arrow.svg" alt="top-right"
+                class="p-4 filter invert brightness-0 w-full h-full" />
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="hotel-item">
+        <img src="./Hotel Icon and Image/Royal Group Hotels/hotel royal grand/WhatsApp Image 2024-07-30 at 13.09.17_091fdaf4.jpg" alt="Hotel Image"
+          class="w-full h-[200px] md:h-[300px] rounded-[20px]" />
+        <div class="flex justify-between text-center items-center mt-2">
+          <div>
+            <a href="#">
+              <h2 class="text-center">Hotel Royal Grand</h2>
+            </a>
+            <p>Ahmedabad, Gujarat</p>
+            <a href="tel:9983001612" class="font-normal text-sm md:text-lg">
+              <p>+91 99830 01612</p>
+            </a>
+            <a href="mailto:hotelroyalgrand65@gmail.com">
+              <p>hotelroyalgrand65@gmail.com</p>
+            </a>
+          </div>
+          <div class="w-16 h-16 md:w-20 md:h-20 border border-black rounded-full mr-2 md:mr-4 bg-primary_1">
+            <a href="https://maps.app.goo.gl/SPuJs6rJwteaZMpS7" target="_blank">
+              <img src="./Hotel Icon and Image/Icon/arrow.svg" alt="top-right"
+                class="p-4 filter invert brightness-0 w-full h-full" />
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="hotel-item">
+        <img src="#" alt="Hotel Image"
+          class="w-full h-[200px] md:h-[300px] rounded-[20px]" />
+        <div class="flex justify-between text-center items-center mt-2">
+          <div>
+            <a href="#">
+              <h2 class="text-center">Hotel Radhe</h2>
+            </a>
+            <p>Anand, Gujarat</p>
+            <a href="tel:9687951555 " class="font-normal text-sm md:text-lg">
+              <p>+91 96879 51555 </p>
+            </a>
+            <a href="mailto:hotelradhe567@gmail.com">
+              <p>hotelradhe567@gmail.com</p>
+            </a>
+          </div>
+          <div class="w-16 h-16 md:w-20 md:h-20 border border-black rounded-full mr-2 md:mr-4 bg-primary_1">
+            <a href="#" target="_blank">
+              <img src="./Hotel Icon and Image/Icon/arrow.svg" alt="top-right"
+                class="p-4 filter invert brightness-0 w-full h-full" />
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="hotel-item">
+        <img src="./Hotel Icon and Image/Royal Group Hotels/Hotel prayosha/WhatsApp Image 2024-07-30 at 13.10.47_4fc37800.jpg" alt="Hotel Image"
+          class="w-full h-[200px] md:h-[300px] rounded-[20px]" />
+        <div class="flex justify-between text-center items-center mt-2">
+          <div>
+            <a href="hotelprayosha.in">
+              <h2 class="text-center">Hotel Prayosha</h2>
+            </a>
+            <p>Gandhinagar, Gujarat</p>
+            <a href="tel:7227947883" class="font-normal text-sm md:text-lg">
+              <p>+91 72279 47883  </p>
+            </a>
+            <a href="mailto:hotelprayosha@gmail.com">
+              <p>hotelprayosha@gmail.com</p>
+            </a>
+          </div>
+          <div class="w-16 h-16 md:w-20 md:h-20 border border-black rounded-full mr-2 md:mr-4 bg-primary_1">
+            <a href="https://maps.app.goo.gl/QvpNtdBGQhHrUD3T7" target="_blank">
+              <img src="./Hotel Icon and Image/Icon/arrow.svg" alt="top-right"
+                class="p-4 filter invert brightness-0 w-full h-full" />
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="hotel-item">
+        <img src="./Hotel Icon and Image/Royal Group Hotels/Hotel Radhe Krishna/IMG-20240730-WA0096.jpg" alt="Hotel Image"
+          class="w-full h-[200px] md:h-[300px] rounded-[20px]" />
+        <div class="flex justify-between text-center items-center mt-2">
+          <div>
+            <a href="#">
+              <h2 class="text-center">Hotel Radhe Krishna</h2>
+            </a>
+            <p>Gandhinagar, Gujarat</p>
+            <a href="tel:9723132265" class="font-normal text-sm md:text-lg">
+              <p>+91 97231 32265</p>
+            </a>
+            <a href="mailto:hotelradhekrishna22@gmail.com">
+              <p>hotelradhekrishna22@gmail.com</p>
+            </a>
+          </div>
+          <div class="w-16 h-16 md:w-20 md:h-20 border border-black rounded-full mr-2 md:mr-4 bg-primary_1">
+            <a href="https://maps.app.goo.gl/SXyv4jJnVprsuNsSA" target="_blank">
+              <img src="./Hotel Icon and Image/Icon/arrow.svg" alt="top-right"
+                class="p-4 filter invert brightness-0 w-full h-full" />
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="hotel-item">
+        <img src="./Hotel Icon and Image/Royal Group Hotels/HOTEL ROYAL FORT DIVISION BY AKSHAR HOTEL/IMG-20240730-WA0099.jpg" alt="Hotel Image"
+          class="w-full h-[200px] md:h-[300px] rounded-[20px]" />
+        <div class="flex justify-between text-center items-center mt-2">
+          <div>
+            <a href="#">
+              <h2 class="text-center">Hotel Royal Fort Division By Akshar Hotel</h2>
+            </a>
+            <p>Gandhinagar, Gujarat</p>
+            <a href="tel:7526989898" class="font-normal text-sm md:text-lg">
+              <p>+91 75269 89898</p>
+            </a>
+            <a href="mailto:Hotelroyalfort2018@gmail.com">
+              <p>Hotelroyalfort2018@gmail.com</p>
+            </a>
+          </div>
+          <div class="w-16 h-16 md:w-20 md:h-20 border border-black rounded-full mr-2 md:mr-4 bg-primary_1">
+            <a href="https://maps.app.goo.gl/LwWTpqFwGfgyDPsR6" target="_blank">
+              <img src="./Hotel Icon and Image/Icon/arrow.svg" alt="top-right"
+                class="p-4 filter invert brightness-0 w-full h-full" />
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="hotel-item">
+        <img src="./Hotel Icon and Image/Royal Group Hotels/Hotel Royal Stay Gandhinagar/IMG-20240730-WA0112.jpg" alt="Hotel Image"
+          class="w-full h-[200px] md:h-[300px] rounded-[20px]" />
+        <div class="flex justify-between text-center items-center mt-2">
+          <div>
+            <a href="#">
+              <h2 class="text-center">Hotel Royal Grand </h2>
+            </a>
+            <p>Ahmedabad, Gujarat</p>
+            <a href="tel:9983001612 " class="font-normal text-sm md:text-lg">
+              <p>+91 99830 01612 </p>
+            </a>
+            <a href="mailto:hotelroyalgrand65@gmail.com">
+              <p>hotelroyalgrand65@gmail.com</p>
+            </a>
+          </div>
+          <div class="w-16 h-16 md:w-20 md:h-20 border border-black rounded-full mr-2 md:mr-4 bg-primary_1">
+            <a href="https://maps.app.goo.gl/xrqXjaRg3rFWhMfn8" target="_blank">
+              <img src="./Hotel Icon and Image/Icon/arrow.svg" alt="top-right"
+                class="p-4 filter invert brightness-0 w-full h-full" />
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="hotel-item">
+        <img src="./Hotel Icon and Image/Royal Group Hotels/Hotel Royal Stay Gandhinagar/IMG-20240730-WA0112.jpg" alt="Hotel Image"
+          class="w-full h-[200px] md:h-[300px] rounded-[20px]" />
+        <div class="flex justify-between text-center items-center mt-2">
+          <div>
+            <a href="#">
+              <h2 class="text-center">Hotel Royal Stay </h2>
+            </a>
+            <p>Gandhinagar, Gujarat</p>
+            <a href="tel:9724555443 " class="font-normal text-sm md:text-lg">
+              <p>+91 97245 55443 </p>
+            </a>
+            <a href="mailto:Hotelroyalstay111@gmail.com">
+              <p>Hotelroyalstay111@gmail.com</p>
+            </a>
+          </div>
+          <div class="w-16 h-16 md:w-20 md:h-20 border border-black rounded-full mr-2 md:mr-4 bg-primary_1">
+            <a href="https://maps.app.goo.gl/6nu1GP9iW2AsstuS8" target="_blank">
+              <img src="./Hotel Icon and Image/Icon/arrow.svg" alt="top-right"
+                class="p-4 filter invert brightness-0 w-full h-full" />
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="hotel-item">
+        <img src="#" alt="Hotel Image"
+          class="w-full h-[200px] md:h-[300px] rounded-[20px]" />
+        <div class="flex justify-between text-center items-center mt-2">
+          <div>
+            <a href="https://hotelkrishna.in">
+              <h2 class="text-center">Hotel Krishna </h2>
+            </a>
+            <p>Mansa, Gujarat</p>
+            <a href="tel:9726991698 " class="font-normal text-sm md:text-lg">
+              <p>+91 97269 91698 </p>
+            </a>
+            <a href="mailto:hotelk597@gmail.com">
+              <p>hotelk597@gmail.com</p>
+            </a>
+          </div>
+          <div class="w-16 h-16 md:w-20 md:h-20 border border-black rounded-full mr-2 md:mr-4 bg-primary_1">
+            <a href="https://maps.app.goo.gl/ghpP3RUqoQH5LrbU8" target="_blank">
+              <img src="./Hotel Icon and Image/Icon/arrow.svg" alt="top-right"
+                class="p-4 filter invert brightness-0 w-full h-full" />
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="hotel-item">
+        <img src="./Hotel Icon and Image/Royal Group Hotels/Hotel Royal Square/IMG-20240730-WA0227.jpg" alt="Hotel Image"
+          class="w-full h-[200px] md:h-[300px] rounded-[20px]" />
+        <div class="flex justify-between text-center items-center mt-2">
+          <div>
+            <a href="#">
+              <h2 class="text-center">Hotel Royal Square </h2>
+            </a>
+            <p>Nadiad, Gujarat</p>
+            <a href="tel:8511525354 " class="font-normal text-sm md:text-lg">
+              <p>+91 85115 25354</p>
+            </a>
+            <a href="mailto:hotelroyalsquare@gmail.com">
+              <p>hotelroyalsquare@gmail.com</p>
+            </a>
+          </div>
+          <div class="w-16 h-16 md:w-20 md:h-20 border border-black rounded-full mr-2 md:mr-4 bg-primary_1">
+            <a href="https://maps.app.goo.gl/XFXxmETcCQQ2FLaz9" target="_blank">
+              <img src="./Hotel Icon and Image/Icon/arrow.svg" alt="top-right"
+                class="p-4 filter invert brightness-0 w-full h-full" />
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="hotel-item">
+        <img src="./Hotel Icon and Image/Royal Group Hotels/HOTEL Royal stay Valsad/IMG-20240730-WA0122.jpg" alt="Hotel Image"
+          class="w-full h-[200px] md:h-[300px] rounded-[20px]" />
+        <div class="flex justify-between text-center items-center mt-2">
+          <div>
+            <a href="#">
+              <h2 class="text-center">Hotel Royal Stay </h2>
+            </a>
+            <p>Valsad, Gujarat</p>
+            <a href="tel:8155823111 " class="font-normal text-sm md:text-lg">
+              <p>+91 81558 23111</p>
+            </a>
+            <a href="mailto:hotelroyalstay2022@gmail.com">
+              <p>hotelroyalstay2022@gmail.com</p>
+            </a>
+          </div>
+          <div class="w-16 h-16 md:w-20 md:h-20 border border-black rounded-full mr-2 md:mr-4 bg-primary_1">
+            <a href="https://maps.app.goo.gl/eRLDk6BcpCc4yAeD6" target="_blank">
+              <img src="./Hotel Icon and Image/Icon/arrow.svg" alt="top-right"
+                class="p-4 filter invert brightness-0 w-full h-full" />
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="hotel-item">
+        <img src="./Hotel Icon and Image/Royal Group Hotels/hote Royal city/IMG-20240730-WA0127.jpg" alt="Hotel Image"
+          class="w-full h-[200px] md:h-[300px] rounded-[20px]" />
+        <div class="flex justify-between text-center items-center mt-2">
+          <div>
+            <a href="#">
+              <h2 class="text-center">Hotel Royal City </h2>
+            </a>
+            <p>Vadodara, Gujarat</p>
+            <a href="tel:6356560023 " class="font-normal text-sm md:text-lg">
+              <p>+91 63565 60023</p>
+            </a>
+            <a href="mailto:hotelroyalcity1998@gmail.com">
+              <p>hotelroyalcity1998@gmail.com</p>
+            </a>
+          </div>
+          <div class="w-16 h-16 md:w-20 md:h-20 border border-black rounded-full mr-2 md:mr-4 bg-primary_1">
+            <a href="https://maps.app.goo.gl/qNW8S1M994tQPie6A" target="_blank">
+              <img src="./Hotel Icon and Image/Icon/arrow.svg" alt="top-right"
+                class="p-4 filter invert brightness-0 w-full h-full" />
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="hotel-item">
+        <img src="#" alt="Hotel Image"
+          class="w-full h-[200px] md:h-[300px] rounded-[20px]" />
+        <div class="flex justify-between text-center items-center mt-2">
+          <div>
+            <a href="#">
+              <h2 class="text-center">Hotel Krishna</h2>
+            </a>
+            <p>Vadodara, Gujarat</p>
+            <a href="tel:9979252223 " class="font-normal text-sm md:text-lg">
+              <p>+91 99792 52223</p>
+            </a>
+            <a href="mailto:hotelkrishna2223@gmail.com">
+              <p>hotelkrishna2223@gmail.com</p>
+            </a>
+          </div>
+          <div class="w-16 h-16 md:w-20 md:h-20 border border-black rounded-full mr-2 md:mr-4 bg-primary_1">
+            <a href="https://maps.app.goo.gl/Cg5HdayYYUWD8CKo9" target="_blank">
+              <img src="./Hotel Icon and Image/Icon/arrow.svg" alt="top-right"
+                class="p-4 filter invert brightness-0 w-full h-full" />
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="hotel-item">
+        <img src="./Hotel Icon and Image/Royal Group Hotels/Hotel Laksh Residency/IMG-20240730-WA0148.jpg" alt="Hotel Image"
+          class="w-full h-[200px] md:h-[300px] rounded-[20px]" />
+        <div class="flex justify-between text-center items-center mt-2">
+          <div>
+            <a href="#">
+              <h2 class="text-center">Hotel Laksh Residency </h2>
+            </a>
+            <p>Anand, Gujarat</p>
+            <a href="tel:8511906030 " class="font-normal text-sm md:text-lg">
+              <p>+91 85119 06030</p>
+            </a>
+            <a href="mailto:hotellaksh2021@gmail.com">
+              <p>hotellaksh2021@gmail.com</p>
+            </a>
+          </div>
+          <div class="w-16 h-16 md:w-20 md:h-20 border border-black rounded-full mr-2 md:mr-4 bg-primary_1">
+            <a href="https://maps.app.goo.gl/rYMTRrRLpDRYxN7q6" target="_blank">
+              <img src="./Hotel Icon and Image/Icon/arrow.svg" alt="top-right"
+                class="p-4 filter invert brightness-0 w-full h-full" />
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="hotel-item">
+        <img src="./Hotel Icon and Image/Royal Group Hotels/Hotel Royal Wings/IMG-20240730-WA0155.jpg" alt="Hotel Image"
+          class="w-full h-[200px] md:h-[300px] rounded-[20px]" />
+        <div class="flex justify-between text-center items-center mt-2">
+          <div>
+            <a href="https://www.hotelroyalwingsvadodara.com" target="_blank">
+              <h2 class="text-center">Hotel Royal Wings </h2>
+            </a>
+            <p>Vadodara, Gujarat</p>
+            <a href="tel:7622994422 " class="font-normal text-sm md:text-lg">
+              <p>+91 76229 94422</p>
+            </a>
+            <a href="mailto:hotelroyalwings4422@gmail.com">
+              <p>hotelroyalwings4422@gmail.com </p>
+            </a>
+          </div>
+          <div class="w-16 h-16 md:w-20 md:h-20 border border-black rounded-full mr-2 md:mr-4 bg-primary_1">
+            <a href="https://maps.app.goo.gl/CtZatwqwHZWtTu4s5" target="_blank">
+              <img src="./Hotel Icon and Image/Icon/arrow.svg" alt="top-right"
+                class="p-4 filter invert brightness-0 w-full h-full" />
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="hotel-item">
+        <img src="#" alt="Hotel Image"
+          class="w-full h-[200px] md:h-[300px] rounded-[20px]" />
+        <div class="flex justify-between text-center items-center mt-2">
+          <div>
+            <a href="#" target="_blank">
+              <h2 class="text-center">Hotel Rishabh Palace</h2>
+            </a>
+            <p>Sabarkantha, Gujarat</p>
+            <a href="tel:9974660048 " class="font-normal text-sm md:text-lg">
+              <p>+91 99746 60048</p>
+            </a>
+            <a href="mailto:hotelrishabhpalace2015@gmail.com">
+              <p>hotelrishabhpalace2015@gmail.com</p>
+            </a>
+          </div>
+          <div class="w-16 h-16 md:w-20 md:h-20 border border-black rounded-full mr-2 md:mr-4 bg-primary_1">
+            <a href="https://maps.app.goo.gl/TNyLsXTXsHcLpJv7A" target="_blank">
+              <img src="./Hotel Icon and Image/Icon/arrow.svg" alt="top-right"
+                class="p-4 filter invert brightness-0 w-full h-full" />
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="hotel-item">
+        <img src="./Hotel Icon and Image/Royal Group Hotels/HOTEL SHIV MAHAL/IMG-20240730-WA0174.jpg" alt="Hotel Image"
+          class="w-full h-[200px] md:h-[300px] rounded-[20px]" />
+        <div class="flex justify-between text-center items-center mt-2">
+          <div>
+            <a href="https://hotelshivmahalnathdwara.com" target="_blank">
+              <h2 class="text-center">Hotel Shiv Mahal </h2>
+            </a>
+            <p>Nathdwara, Gujarat</p>
+            <a href="tel:8000298881 " class="font-normal text-sm md:text-lg">
+              <p>+91 80002 98881</p>
+            </a>
+            <a href="mailto:hotelshivmahalnathdwara@gmail.com">
+              <p>hotelshivmahalnathdwara@gmail.com</p>
+            </a>
+          </div>
+          <div class="w-16 h-16 md:w-20 md:h-20 border border-black rounded-full mr-2 md:mr-4 bg-primary_1">
+            <a href="https://maps.app.goo.gl/MdPRtf8MHJERF3zh6" target="_blank">
+              <img src="./Hotel Icon and Image/Icon/arrow.svg" alt="top-right"
+                class="p-4 filter invert brightness-0 w-full h-full" />
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="hotel-item">
+        <img src="./Hotel Icon and Image/Royal Group Hotels/HOTEL ROYAL KING/IMG-20240730-WA0181.jpg" alt="Hotel Image"
+          class="w-full h-[200px] md:h-[300px] rounded-[20px]" />
+        <div class="flex justify-between text-center items-center mt-2">
+          <div>
+            <a href="#" target="_blank">
+              <h2 class="text-center">Hotel Royal King </h2>
+            </a>
+            <p>Vadodara, Gujarat</p>
+            <a href="tel:9974690620 " class="font-normal text-sm md:text-lg">
+              <p>+91 99746 90620</p>
+            </a>
+            <a href="mailto:hotelroyalking1998@gmail.com">
+              <p>hotelroyalking1998@gmail.com </p>
+            </a>
+          </div>
+          <div class="w-16 h-16 md:w-20 md:h-20 border border-black rounded-full mr-2 md:mr-4 bg-primary_1">
+            <a href="https://maps.app.goo.gl/HgZvGdjRbVmXLdHdA" target="_blank">
+              <img src="./Hotel Icon and Image/Icon/arrow.svg" alt="top-right"
+                class="p-4 filter invert brightness-0 w-full h-full" />
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="hotel-item">
+        <img src="#" alt="Hotel Image"
+          class="w-full h-[200px] md:h-[300px] rounded-[20px]" />
+        <div class="flex justify-between text-center items-center mt-2">
+          <div>
+            <a href="#" target="_blank">
+              <h2 class="text-center">Hotel Vrudavan</h2>
+            </a>
+            <p>Gandhinagar, Gujarat</p>
+            <a href="tel:8128968889 " class="font-normal text-sm md:text-lg">
+              <p>+91 81289 68889</p>
+            </a>
+            <a href="mailto:#">
+              <p># </p>
+            </a>
+          </div>
+          <div class="w-16 h-16 md:w-20 md:h-20 border border-black rounded-full mr-2 md:mr-4 bg-primary_1">
+            <a href="https://maps.app.goo.gl/JogNvSHei7saMhCB8" target="_blank">
+              <img src="./Hotel Icon and Image/Icon/arrow.svg" alt="top-right"
+                class="p-4 filter invert brightness-0 w-full h-full" />
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="hotel-item">
+        <img src="#" alt="Hotel Image"
+          class="w-full h-[200px] md:h-[300px] rounded-[20px]" />
+        <div class="flex justify-between text-center items-center mt-2">
+          <div>
+            <a href="https://www.hotelkrishnaguesthouse.com" target="_blank">
+              <h2 class="text-center">Hotel Krishna</h2>
+            </a>
+            <p>Valsad, Gujarat</p>
+            <a href="tel:8154858444 " class="font-normal text-sm md:text-lg">
+              <p>+91 81548 58444</p>
+            </a>
+            <a href="mailto:hotelkrishnavapi@gmail.com">
+              <p>hotelkrishnavapi@gmail.com</p>
+            </a>
+          </div>
+          <div class="w-16 h-16 md:w-20 md:h-20 border border-black rounded-full mr-2 md:mr-4 bg-primary_1">
+            <a href="https://maps.app.goo.gl/WZeZ7n5cVJSLHt8P8" target="_blank">
+              <img src="./Hotel Icon and Image/Icon/arrow.svg" alt="top-right"
+                class="p-4 filter invert brightness-0 w-full h-full" />
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="hotel-item">
+        <img src="./Hotel Icon and Image/Royal Group Hotels/Hotel Kamal/IMG-20240730-WA0207.jpg Royal Wings/IMG-20240730-WA0155.jpg" alt="Hotel Image"
+          class="w-full h-[200px] md:h-[300px] rounded-[20px]" />
+        <div class="flex justify-between text-center items-center mt-2">
+          <div>
+            <a href="https://www.hotelkaml.in" target="_blank">
+              <h2 class="text-center">Hotel Kamal</h2>
+            </a>
+            <p>Ahmedabad, Gujarat</p>
+            <a href="tel:9033022398" class="font-normal text-sm md:text-lg">
+              <p>+91 90330 22398</p>
+            </a>
+            <a href="mailto:hotelkamal3322@gmail.com">
+              <p>hotelkamal3322@gmail.com</p>
+            </a>
+          </div>
+          <div class="w-16 h-16 md:w-20 md:h-20 border border-black rounded-full mr-2 md:mr-4 bg-primary_1">
+            <a href="https://maps.app.goo.gl/n2hrmR2a2aDAkPATA" target="_blank">
+              <img src="./Hotel Icon and Image/Icon/arrow.svg" alt="top-right"
+                class="p-4 filter invert brightness-0 w-full h-full" />
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="hotel-item">
+        <img src="./Hotel Icon and Image/Royal Group Hotels/Hotel anytime gandhinagar/IMG-20240730-WA0247.jpg" alt="Hotel Image"
+          class="w-full h-[200px] md:h-[300px] rounded-[20px]" />
+        <div class="flex justify-between text-center items-center mt-2">
+          <div>
+            <a href="#" target="_blank">
+              <h2 class="text-center">Hotel Anytime</h2>
+            </a>
+            <p>Gandhinagar, Gujarat</p>
+            <a href="tel:7329989898 " class="font-normal text-sm md:text-lg">
+              <p>+91 73299 89898</p>
+            </a>
+            <a href="mailto:anytimehotel7@gmail.com">
+              <p>anytimehotel7@gmail.com</p>
+            </a>
+          </div>
+          <div class="w-16 h-16 md:w-20 md:h-20 border border-black rounded-full mr-2 md:mr-4 bg-primary_1">
+            <a href="https://maps.app.goo.gl/61vbom7uKzVw3hKk7" target="_blank">
+              <img src="./Hotel Icon and Image/Icon/arrow.svg" alt="top-right"
+                class="p-4 filter invert brightness-0 w-full h-full" />
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="hotel-item">
+        <img src="./Hotel Icon and Image/Royal Group Hotels/Hotel Royal Wings/IMG-20240730-WA0155.jpg" alt="Hotel Image"
+          class="w-full h-[200px] md:h-[300px] rounded-[20px]" />
+        <div class="flex justify-between text-center items-center mt-2">
+          <div>
+            <a href="https://www.hotelroyalwingsvadodara.com" target="_blank">
+              <h2 class="text-center">Hotel Royal Gold </h2>
+            </a>
+            <p>Ranasan, Gujarat</p>
+            <a href="tel:9974768186 " class="font-normal text-sm md:text-lg">
+              <p>+91 99747 68186</p>
+            </a>
+            <a href="mailto:hotelroyalgold8186@gmail.com">
+              <p>hotelroyalgold8186@gmail.com</p>
+            </a>
+          </div>
+          <div class="w-16 h-16 md:w-20 md:h-20 border border-black rounded-full mr-2 md:mr-4 bg-primary_1">
+            <a href="https://maps.app.goo.gl/YJAaKRMB8CVbuXQ7A" target="_blank">
+              <img src="./Hotel Icon and Image/Icon/arrow.svg" alt="top-right"
+                class="p-4 filter invert brightness-0 w-full h-full" />
+            </a>
+          </div>
+        </div>
+      </div>
+
+
     </div>
-  </div>
-  <div class="search-hotel mt-10 grid grid-cols-1 md:grid-cols-3 gap-8">
-    <div class=" space-y-4">
-      <img src="./Hotel Icon and Image/Image/Rectangle 18.png" alt="Hotel Image" class="w-full rounded">
-      <h2 class="text-center">Emerald Valley Lodge</h2>
-      <p>Ramdev Nagar Cross Road, Satellite Road, Ahmedabad, Gujarat 380015</p>
+    <div class="flex justify-center mt-8">
+      <button id="viewAllBtn" 
+        class="border border-border_color rounded-[17px] text-primary_3 hover:bg-primary_1 hover:text-white font-medium text-lg md:text-xl px-8 py-4"
+        type="submit" onclick="toggleViewAll()">View all</button>
     </div>
-    <div class="space-y-4">
-      <img src="./Hotel Icon and Image/Image/Rectangle 18.png" alt="Hotel Image" class="w-full rounded">
-      <h2 class="text-center">The Peninsula Hotels</h2>
-      <p class="text-center"> Ashram Road, Navrangpura, Ahmedabad, Gujarat 380009</p>
+  </section>
+
+  <!-- <section class="mt-[100px] mx-[50px]">
+    <div class="flex justify-between">
+      <div class="relative">
+        <img class="absolute top-[-25px] left-0 -rotate-90" src="./Hotel Icon and Image/Icon/Title Design.svg" alt=""
+          srcset="">
+        <h2 class="text-5xl font-semibold text-left ml-6  text-primary_1">Royal Group of Hotels</h2>
+      </div>
+      <div class="">
+        <p class="font-normal  text-[24px]  max-w-xl">Discover the excellence and charm of our other
+          locations within the Royal Group of Hotels.</p>
+        <div class="relative">
+          <button>
+            <img src="./Hotel Icon and Image/Icon/Search.svg" alt="search" class="absolute top-[55%] left-[58%]">
+          </button>
+          <input type="text" placeholder="Find Hotel"
+            class="pl-4 pr-14 py-3 text-xl font-normal  text-left mt-10 w-[385px] h-[58px]  border border-border_color_2 rounded-[19px] focus:outline-none focus:ring-2 focus:ring-gray-400">
+        </div>
+
+      </div>
     </div>
-    <div class="space-y-4">
-      <img src="./Hotel Icon and Image/Image/Rectangle 18.png" alt="Hotel Image" class="w-full rounded">
-      <h2 class="text-center">Marriott Hotels</h2>
-      <p class="text-center">Iscon Cross Road, S.G. Highway, Ahmedabad, Gujarat 380015</p>
+    <div class="search-hotel mt-10 grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div class="">
+        <img src="./Hotel Icon and Image/Royal Group Hotels/Hotel Royal Palace/IMG-20240730-WA0055.jpg" alt="Hotel Image" class="w-full object-cover h-[300px] rounded-[20px]">
+        <div class="flex justify-between text-center items-center">
+          <div>
+            <a href="hotelroyalonline.com">
+              <h2 class="text-center mt-2">Hotel Royal Palace</h2>
+            </a>
+            <p>Vadodara, Gujarat</p>
+            <a href="tel:9662448899" class="font-normal text-lg sm:text-xl">
+              <p>+91 96624 48899 </p>
+            </a>
+            <a href="mailto:Hotelroyal8899@gmail.com">
+              <p>Hotelroyal8899@gmail.com</p>
+            </a>
+          </div>
+
+          <div class="w-20 h-20 border border-black rounded-full mr-4 bg-primary_1">
+            <a href="https://maps.app.goo.gl/47pcNttQMwfF9aEh9" target="_blank">
+              <img src="./Hotel Icon and Image/Icon/arrow.svg" alt="top-right"
+                class="p-4 filter invert brightness-0 h-20 w-20">
+            </a>
+
+          </div>
+        </div>
+
+      </div>
+      <div class="">
+        <img src="./Hotel Icon and Image/Royal Group Hotels/HOTEL ROYAL RESIDENCY/WhatsApp Image 2024-07-30 at 13.02.25_947ccf63.jpg" alt="Hotel Image" class="w-full h-[300px] rounded-[20px]">
+        <div class="flex justify-between text-center items-center">
+          <div>
+            <a href="www.hotelroyalresidency.info">
+              <h2 class="text-center mt-2">Hotel Royal Residency</h2>
+            </a>
+            <p>Vadodara, Gujarat</p>
+            <a href="tel:8758708586" class="font-normal text-lg sm:text-xl">
+              <p>+91 87587 08586 </p>
+            </a>
+            <a href="mailto:hotelroyal8586@gmail.com">
+              <p>hotelroyal8586@gmail.com</p>
+            </a>
+          </div>
+
+          <div class="w-20 h-20 border border-black rounded-full mr-4 bg-primary_1">
+            <a href="https://maps.app.goo.gl/6cfURzZUAoFp8N17A" target="_blank">
+              <img src="./Hotel Icon and Image/Icon/arrow.svg" alt="top-right"
+                class="p-4 filter invert brightness-0 h-20 w-20">
+            </a>
+
+          </div>
+        </div>
+      </div>
+      <div class="">
+        <img src="./Hotel Icon and Image/Royal Group Hotels/hotel royal plaza/WhatsApp Image 2024-07-30 at 13.03.37_0ed7e942.jpg" alt="Hotel Image" class="w-full object-cover h-[300px] rounded-[20px]">
+        <div class="flex justify-between text-center items-center">
+          <div>
+            <a href="#">
+              <h2 class="text-center mt-2">Hotel Royal Plaza</h2>
+            </a>
+            <p>Surat, Gujarat</p>
+            <a href="tel:9574475656" class="font-normal text-lg sm:text-xl">
+              <p>+91 95744 75656 </p>
+            </a>
+            <a href="mailto:hotelroyalplaza5656@gmail.com">
+              <p>hotelroyalplaza5656@gmail.com</p>
+            </a>
+          </div>
+
+          <div class="w-20 h-20 border border-black rounded-full mr-4 bg-primary_1">
+            <a href="https://maps.app.goo.gl/vb6zTrsk1nfFMHiL8" target="_blank">
+              <img src="./Hotel Icon and Image/Icon/arrow.svg" alt="top-right"
+                class="p-4 filter invert brightness-0 h-20 w-20">
+            </a>
+
+          </div>
+        </div>
+      </div>
+      <div class="">
+        <img src="./Hotel Icon and Image/Royal Group Hotels/Hotel krishna palace/WhatsApp Image 2024-07-30 at 13.04.13_4c4e0931.jpg" alt="Hotel Image" class="w-full h-[300px] rounded-[20px]">
+        <div class="flex justify-between text-center items-center">
+          <div>
+            <a href="#">
+              <h2 class="text-center mt-2">Hotel Krishna Palace</h2>
+            </a>
+            <p>Anand, Gujarat</p>
+            <a href="tel:7043886886" class="font-normal text-lg sm:text-xl">
+              <p>+91 70438 86886 </p>
+            </a>
+            <a href="mailto:hotelkrishna886@gmail.com">
+              <p>hotelkrishna886@gmail.com</p>
+            </a>
+          </div>
+
+          <div class="w-20 h-20 border border-black rounded-full mr-4 bg-primary_1">
+            <a href="https://maps.app.goo.gl/c6snoQ95tfa37awy9" target="_blank">
+              <img src="./Hotel Icon and Image/Icon/arrow.svg" alt="top-right"
+                class="p-4 filter invert brightness-0 h-20 w-20">
+            </a>
+
+          </div>
+        </div>
+      </div>
+      <div class="">
+        <img src="./Hotel Icon and Image/Image/Rectangle 18.png" alt="Hotel Image" class="w-full h-[300px] rounded-[20px]">
+        <div class="flex justify-between text-center items-center">
+          <div>
+            <a href="#">
+              <h2 class="text-center mt-2">Hotel Royal Relax</h2>
+            </a>
+            <p>Gandhinagar, Gujarat</p>
+            <a href="tel:9725543597" class="font-normal text-lg sm:text-xl">
+              <p>+91 97255 43597 </p>
+            </a>
+            <a href="mailto:hotelroyalrelax81@gmail.com">
+              <p>hotelroyalrelax81@gmail.com</p>
+            </a>
+          </div>
+
+          <div class="w-20 h-20 border border-black rounded-full mr-4 bg-primary_1">
+            <a href="https://maps.app.goo.gl/B44EvuVUcZSKYQak7" target="_blank">
+              <img src="./Hotel Icon and Image/Icon/arrow.svg" alt="top-right"
+                class="p-4 filter invert brightness-0 h-20 w-20">
+            </a>
+
+          </div>
+        </div>
+      </div>
+      <div class="">
+        <img src="./Hotel Icon and Image/Image/Rectangle 18.png" alt="Hotel Image" class="w-full h-[300px] rounded-[20px]">
+        <div class="flex justify-between text-center items-center">
+          <div>
+            <a href="hotelroyalinnanand.in">
+              <h2 class="text-center mt-2">Hotel Royal Inn.</h2>
+            </a>
+            <p>Anand, Gujarat</p>
+            <a href="tel:8511803435" class="font-normal text-lg sm:text-xl">
+              <p>+91 8511803435 </p>
+            </a>
+            <a href="mailto:royalinnanand@gmail.com">
+              <p>royalinnanand@gmail.com</p>
+            </a>
+          </div>
+
+          <div class="w-20 h-20 border border-black rounded-full mr-4 bg-primary_1">
+            <a href="https://maps.app.goo.gl/k4fdYKVZpAuuiEyw5" target="_blank">
+              <img src="./Hotel Icon and Image/Icon/arrow.svg" alt="top-right"
+                class="p-4 filter invert brightness-0 h-20 w-20">
+            </a>
+
+          </div>
+        </div>
+      </div>
     </div>
-    <div class="space-y-4">
-      <img src="./Hotel Icon and Image/Image/Rectangle 18.png" alt="Hotel Image" class="w-full rounded">
-      <h2 class="text-center">The Ritz-Carlton</h2>
-      <p class="text-center">Ramdev Nagar Cross Road, Sg highway, Gandhinagar, Gujarat 380015</p>
+    <div class="flex justify-center ">
+      <button
+        class="border items-center border-border_color rounded-[17px] text-primary_3 hover:bg-primary_1 hover:text-white font-medium  text-xl px-[60px] py-[18px] mt-[64px]"
+        type="submit">View all</button>
     </div>
-    <div class="space-y-4">
-      <img src="./Hotel Icon and Image/Image/Rectangle 18.png" alt="Hotel Image" class="w-full rounded">
-      <h2 class="text-center">Four Seasons Hotel</h2>
-      <p class="text-center">Ramdev Nagar Cross Road, Satellite Road, Ahmedabad, Gujarat 380015</p>
-    </div>
-    <div class="space-y-4">
-      <img src="./Hotel Icon and Image/Image/Rectangle 18.png" alt="Hotel Image" class="w-full rounded">
-      <h2 class="text-center">The Peninsula Hotels</h2>
-      <p class="text-center">Ashram Road, Navrangpura, Ahmedabad, Gujarat 380009</p>
-    </div>
-  </div>
-  <div class="flex justify-center ">
-    <button
-      class="border items-center border-border_color rounded-[17px] text-primary_3 hover:bg-primary_1 hover:text-white font-medium  text-xl px-[60px] py-[18px] mt-[64px]"
-      type="submit">View all</button>
-  </div>
-</section> -->
+  </section> -->
 
 
   <!-- Contact section start here  -->
@@ -473,6 +1296,7 @@
 
 </body>
 <script src="script.js"></script>
+<script src="app.js"></script>
 
 
 </html>
