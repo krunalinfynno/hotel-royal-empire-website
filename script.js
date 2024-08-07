@@ -52,7 +52,7 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
     
-
+    
     const roomData = {
         deluxe: {
             title: 'Royal Silver',
