@@ -56,7 +56,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const roomData = {
         deluxe: {
             title: 'Royal Silver',
-            price: '₹2000/-',
+            price: '₹3000/-',
             description: 'The way we travel and move has changed in the last few years. We no longer want the typical photo that all our contacts post on Instagram...',
             facilities: [
                 { icon: './Hotel Icon and Image/Icon/Wifi.svg', name: 'Wi-Fi' },
@@ -73,7 +73,7 @@ document.addEventListener('DOMContentLoaded', function () {
         },
         suite: {
             title: 'Royal Golden',
-            price: '₹2500/-',
+            price: '₹3500/-',
             description: 'The way we travel and move has changed in the last few years. We no longer want the typical photo that all our contacts post on Instagram...',
             facilities: [
                 { icon: './Hotel Icon and Image/Icon/Wifi.svg', name: 'Wi-Fi' },
@@ -90,7 +90,7 @@ document.addEventListener('DOMContentLoaded', function () {
         },
         family: {
             title: 'Royal Executive',
-            price: '₹3000/-',
+            price: '₹4000/-',
             description: 'The way we travel and move has changed in the last few years. We no longer want the typical photo that all our contacts post on Instagram...',
             facilities: [
                 { icon: './Hotel Icon and Image/Icon/Wifi.svg', name: 'Wi-Fi' },
@@ -107,7 +107,7 @@ document.addEventListener('DOMContentLoaded', function () {
         },
         studio: {
             title: 'Royal Suite Room',
-            price: '₹3500/-',
+            price: '₹5000/-',
             description: 'The way we travel and move has changed in the last few years. We no longer want the typical photo that all our contacts post on Instagram...',
             facilities: [
                 { icon: './Hotel Icon and Image/Icon/Wifi.svg', name: 'Wi-Fi' },
